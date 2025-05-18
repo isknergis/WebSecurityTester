@@ -10,17 +10,22 @@
 
     <h2>SQL Injection Testi:</h2>
     <ul>
-        {% for result in sql %}
-            <li>{{ result }}</li>
-        {% endfor %}
-    </ul>
+    {% for result in sql %}
+        <li style="color: {% if '[!]' in result %} red {% else %} green {% endif %};">{{ result }}</li>
+    {% endfor %}
+</ul>
+
+
+
 
     <h2>XSS Testi:</h2>
     <ul>
-        {% for result in xss %}
-            <li>{{ result }}</li>
-        {% endfor %}
-    </ul>
+    {% for result in xss %}
+        <li style="color: {% if '[!]' in result %} red {% else %} green {% endif %};">{{ result }}</li>
+    {% endfor %}
+</ul>
+
+
 
     <a href="/">Yeni Test Başlat</a>
 </body>
